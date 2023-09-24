@@ -8,7 +8,7 @@ class CategoriesService {
 
   generate() {
     const limit = 100;
-    for (let index = 0; i < limit; index++) {
+    for (let index = 0; index < limit; index++) {
       this.categories.push({
         id: faker.string.uuid(),
         category: faker.commerce.department()

@@ -8,7 +8,7 @@ class UsersService {
 
   generate() {
     const limit = 100;
-    for (let index = 0; i < limit; index++) {
+    for (let index = 0; index < limit; index++) {
       this.users.push({
         id: faker.string.uuid(),
         firstName: faker.person.firstName(),
