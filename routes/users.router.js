@@ -16,28 +16,21 @@ router.get('/:id', (req, res) => {
 
 router.post('/', (req, res) => {
   const body = req.body;
-  res.json({
-    message: 'created',
-    data: body,
-  })
+  const newUser = service.create(body)
+  res.status(201).json(newUser)
 })
 
 router.patch('/:id', (req, res) => {
   const { id } = req.params;
   const body = req.body;
-  res.json({
-    message: 'updated',
-    data: body,
-    id,
-  })
+  const user = service.update(id, body)
+  res.json(user)
 })
 
 router.delete('/:id', (req, res) => {
   const { id } = req.params;
-  res.json({
-    message: 'delete',
-    id,
-  })
+  const reply = service.delete(id)
+  res.json(reply)
 })
 
 module.exports = router;
