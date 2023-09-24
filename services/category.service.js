@@ -36,7 +36,7 @@ class CategoriesService {
   async update(id, changes) {
     const index = this.categories.findIndex(item => item.id === id);
     if ( index === -1 ) {
-      throw new Error("Category not found")
+      throw new Error("it could be updated, category not found")
     }
     const category = this.categories[index]
     this.categories[index] = {
@@ -49,7 +49,7 @@ class CategoriesService {
   async delete(id) {
     const index = this.categories.findIndex(item => item.id === id)
     if( index === -1) {
-      throw new Error("Category not found")
+      throw new Error("it could be deleted, category not found")
     }
     this.categories.splice(index, 1)
     return {
