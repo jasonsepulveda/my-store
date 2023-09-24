@@ -13,10 +13,10 @@ class ProductsService {
       this.products.push({
         id: faker.string.uuid(),
         product: faker.commerce.product(),
+        price: parseInt(faker.commerce.price(), 10),
         productName: faker.commerce.productName(),
         productDescription: faker.commerce.productDescription(),
         category: faker.commerce.department(),
-        price: parseInt(faker.commerce.price(), 10),
         image: faker.image.url(),
         isBlock: faker.datatype.boolean()
       });
