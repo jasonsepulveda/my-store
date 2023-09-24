@@ -10,8 +10,13 @@ router.get('/', (req, res) => {
     users.push({
       firstName: faker.person.firstName(),
       lastName: faker.person.lastName(),
+      username: faker.internet.userName(),
       gender: faker.person.gender(),
       avatar: faker.image.avatar(),
+      userId: faker.string.uuid(),
+      email: faker.internet.email(),
+      password: faker.internet.password(),birthdate: faker.date.birthdate(),
+      registeredAt: faker.date.past(),
     });
   }
   res.json(users);
